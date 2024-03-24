@@ -7,7 +7,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import { useState } from 'react';
 
-const UNSPLASK_KEY = process.env.REACT_APP_UNSPLASH_KEY;
+const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
 const App = () => {
   const [word, setWord] = useState('');
@@ -17,7 +17,7 @@ const App = () => {
     e.preventDefault();
     console.log(word);
     fetch(
-      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASK_KEY}`,
+      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`,
     )
       .then((res) => res.json())
       .then((data) => {
