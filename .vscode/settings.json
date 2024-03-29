@@ -1,6 +1,15 @@
 {
   "eslint.validate": ["html", "javascript", "javascriptreact"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": "always",
+    "source.fixAll": "always"
+  },
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "black",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.terminal.activateEnvInCurrentTerminal": false,
+  "[python]": {
+    "editor.formatOnSave": true
   }
 }
