@@ -11,7 +11,7 @@ UNSPLASH_URL = "https://api.unsplash.com/photos/random"
 UNSPLASH_KEY = os.environ.get("UNSPLASH_KEY", "")
 DEBUG = bool(os.environ.get("DEBUG", True))
 APIC_USER = os.environ.get("APIC_USER", "admin")
-APIC_PASSWORD = os.environ.get("APIC_PASSWORD", "C1sc0123")
+APIC_PASSWORD = os.environ.get("APIC_PASSWORD", "")
 APIC_URL = os.environ.get("APIC_URL", "10.138.159.34")
 
 if not UNSPLASH_KEY:
