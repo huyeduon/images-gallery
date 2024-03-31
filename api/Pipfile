@@ -10,6 +10,7 @@ flask-cors = "*"
 pylint = "*"
 pycodestyle = "*"
 requests = "*"
+pymongo = "*"
 
 [dev-packages]
 black = "*"
