@@ -40,13 +40,21 @@ const App = () => {
   };
 
   // delete image by ID return from API, ID is unique
-  const handleDeleteImage = (id) => {
-    setImages(images.filter((image) => image.id !== id));
+  const handleDeleteImage = async (id) => {
+    try {
+      const res = await axios.delete(`${API_URL}/images/${id}`);
+      if (res.data?.deleted_id) {
+        setImages(images.filter((image) => image.id !== id));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // save image to mongodb
   const handleSaveImage = async (id) => {
     const imageToBeSaved = images.find((image) => image.id === id);
+    // create new property to tracking saved status of image
     imageToBeSaved.saved = true;
 
     try {
