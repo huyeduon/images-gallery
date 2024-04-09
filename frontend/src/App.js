@@ -96,6 +96,8 @@ const App = () => {
                       image={image}
                       deleteImage={handleDeleteImage}
                       saveImage={handleSaveImage}
+                      author={image.user.username}
+                      authorUrl={image.user.portfolio_url}
                     />
                   </Col>
                 ))}
